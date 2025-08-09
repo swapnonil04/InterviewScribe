@@ -1,58 +1,30 @@
-# =========================================
-# Dependencies & Lock Files
-# =========================================
-# Never commit your project's dependencies. They are installed via package.json.
+
 node_modules/
-# The bun lockfile is a binary file and can cause merge conflicts.
 bun.lockb
 
-# =========================================
-# Environment Variables
-# =========================================
-# CRITICAL: Contains secrets like API keys. Never commit this file.
-# Your hosting provider will have a separate place for these.
 .env
 .env.local
 .env.*.local
 .env.development
 .env.production
 
-# =========================================
-# Build & Production Output
-# =========================================
-# These files are generated automatically when you build your project.
 dist/
 build/
 .next/
 .svelte-kit/
 out/
 
-# =========================================
-# Logs
-# =========================================
-# Log files are specific to your machine and shouldn't be tracked.
 *.log
 npm-debug.log*
 yarn-error.log*
 yarn-debug.log*
 
-# =========================================
-# System Files
-# =========================================
-# OS-specific files that have no place in a shared repository.
 .DS_Store
 Thumbs.db
 
-# =========================================
-# Editor & IDE Directories
-# =========================================
-# Workspace settings that can be user-specific.
 .vscode/
 .idea/
 
-# =========================================
-# Test Reports
-# =========================================
-# Test coverage reports are generated on-the-fly.
+
 coverage/
 .nyc_output/
