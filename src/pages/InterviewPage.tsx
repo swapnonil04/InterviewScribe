@@ -69,7 +69,7 @@ export default function InterviewPage() {
         const currentHistory = [...conversation, { role: 'user' as const, text: userAnswer }];
         setConversation(currentHistory);
         try {
-            const response = await fetch('http://localhost:3001/api/process-answer', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/process-answer`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
