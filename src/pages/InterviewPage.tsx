@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
+// --- Interfaces for our data structures ---
 interface Feedback {
   score: number;
   feedback: string;
@@ -47,7 +47,8 @@ export default function InterviewPage() {
     const startInterview = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/start-interview', { method: 'POST' });
+            // *** FIX: Changed single quotes to backticks (`) ***
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/start-interview`, { method: 'POST' });
             if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
             
